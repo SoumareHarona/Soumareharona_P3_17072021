@@ -2,10 +2,24 @@ body{
     background: #fff;
 }
 
-
-.content{
+.title{
   display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+.title .fa {
+  font-size: 25px;
+
+}
+.content{
+  flex: 1;
   flex-direction: column;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  strong {
+  }
 }
 
 .prix{
@@ -14,11 +28,8 @@ body{
  
 }
 
-p{
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.check{
+
+.check_icon{
   background: #99e2d0;
     cursor: pointer;
     height: auto;
@@ -33,7 +44,7 @@ p{
     ease-in-out, opacity 0.4s 
     ease-in-out;
 }
-.entree  {
+.starter {
     display: flex;
     flex-direction: row;
     background-color: #fff;
@@ -42,21 +53,27 @@ p{
     padding: 1rem;
     overflow: hidden;
     cursor: pointer;
-    animation-duration: 3s;
-    animation-delay: 15s;
-    animation-name: glissement;
-    gap:1rem
+    gap:1rem;
+    animation: glissement 0.3s linear;
+    margin-top: 1rem;
+
+    animation-fill-mode: both;  
+    &:nth-child(1) { animation-delay: .25s }
+    &:nth-child(2) { animation-delay: .5s }
+    &:nth-child(3) { animation-delay: .75s }
+    &:nth-child(4) { animation-delay: 1s }
+
   
 }
 
 @keyframes glissement {
   from {
-    margin-left: 100%;
-    width: 300%;
+    transform: translateY(-20px);
+    opacity: 0;
   }
 
   to {
-    margin-left: 0%;
-    width: 100%;
+    opacty:1;
+    transform: translateY(0);
   }
 }
