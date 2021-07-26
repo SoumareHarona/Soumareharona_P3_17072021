@@ -2,4 +2,58 @@ body {
   background: #fff;
 }
 
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.prix {
+  display: flex;
+  align-items: flex-end;
+}
+
+p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.check {
+  background: #99e2d0;
+  cursor: pointer;
+  height: auto;
+  width: 0;
+  opacity: 0;
+  border-radius: 0 15px 15px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.4s ease-in-out, width 0.4s ease-in-out, opacity 0.4s ease-in-out;
+}
+
+.entree {
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+  box-shadow: 0 0 16px #d4cfcf;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  overflow: hidden;
+  cursor: pointer;
+  animation-duration: 3s;
+  animation-delay: 15s;
+  animation-name: glissement;
+  gap: 1rem;
+}
+
+@keyframes glissement {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
