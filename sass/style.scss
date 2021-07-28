@@ -2,6 +2,25 @@ body{
     background: #fff;
 }
 
+
+.header_banner{
+  max-height: 300px;
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: -20px;
+}
+
+.header_title{
+  display: flex;
+  align-items: center;
+  height: 60px;
+  justify-content: center;
+}
+
+.back_home i{
+  margin-left: 1rem;
+
+}
 .title{
   display: flex;
   align-items: center;
