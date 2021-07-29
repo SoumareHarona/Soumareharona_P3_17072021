@@ -17,6 +17,7 @@ body{
   justify-content: center;
 }
 
+
 .back_home i{
   margin-left: 1rem;
 
@@ -24,12 +25,13 @@ body{
 .title{
   display: flex;
   align-items: center;
+  justify-content: space-between;
 
 }
 
 .title .fa {
   font-size: 25px;
-  margin-left: 6rem;
+  
 
 }
 .content{

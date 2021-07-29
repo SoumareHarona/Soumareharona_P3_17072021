@@ -23,11 +23,11 @@ body {
 .title {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .title .fa {
   font-size: 25px;
-  margin-left: 6rem;
 }
 
 .content {
