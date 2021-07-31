@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   background: #fff;
 }
@@ -14,6 +15,22 @@ body {
   align-items: center;
   height: 60px;
   justify-content: center;
+  position: relative;
+}
+
+.header_title a {
+  width: 0;
+  height: 0;
+  background: transparent !important;
+}
+
+.header_title a i::before {
+  font-family: "Font Awesome 5 Free";
+  content: "";
+  position: absolute;
+  top: 20%;
+  left: 0;
+  background: transparent !important;
 }
 
 .back_home i {
@@ -47,7 +64,6 @@ body {
   cursor: pointer;
   height: auto;
   width: 0;
-  opacity: 0;
   border-radius: 0 15px 15px 0;
   display: flex;
   align-items: center;
