@@ -21,7 +21,6 @@ body {
 .header_title a {
   width: 0;
   height: 0;
-  background: transparent !important;
 }
 
 .header_title a i::before {
@@ -30,7 +29,6 @@ body {
   position: absolute;
   top: 20%;
   left: 0;
-  background: transparent !important;
 }
 
 .back_home i {
@@ -60,11 +58,25 @@ body {
 }
 
 .check_icon {
-  background: #99e2d0;
+  background: transparent;
   cursor: pointer;
   height: auto;
   width: 0;
-  border-radius: 0 15px 15px 0;
+  opacity: 0;
+  border-radius: 0 0.5rem 0.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.4s ease-in-out, width 0.4s ease-in-out, opacity 0.4s ease-in-out;
+}
+
+.check_icon:hover {
+  background: #99e2d0;
+  cursor: pointer;
+  height: 40px;
+  width: 80px;
+  opacity: 1;
+  border-radius: 0 0.5rem 0.5rem 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -77,7 +89,6 @@ body {
   background-color: #fff;
   box-shadow: 0 0 16px #d4cfcf;
   border-radius: 0.5rem;
-  padding: 1rem;
   overflow: hidden;
   cursor: pointer;
   gap: 1rem;
