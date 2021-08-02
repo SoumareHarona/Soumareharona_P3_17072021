@@ -1,13 +1,14 @@
 @charset "UTF-8";
 body {
-  background: #fff;
+  margin: 0;
+  padding: 0;
 }
 
 .header_banner {
   max-height: 300px;
   width: 100%;
   object-fit: cover;
-  margin-bottom: -20px;
+  margin-bottom: -30px;
 }
 
 .header_title {
@@ -27,8 +28,10 @@ body {
   font-family: "Font Awesome 5 Free";
   content: "";
   position: absolute;
-  top: 20%;
+  top: 40%;
   left: 0;
+  font-size: 20px;
+  color: black;
 }
 
 .back_home i {
@@ -51,16 +54,19 @@ body {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  padding: 0.5rem;
 }
 .prix {
   display: flex;
   align-items: flex-end;
+  padding: 0.5rem;
 }
 
 .check_icon {
-  background: transparent;
+  background-color: #99e2d0;
+  color: #fff;
   cursor: pointer;
-  height: auto;
+  height: 60px;
   width: 0;
   opacity: 0;
   border-radius: 0 0.5rem 0.5rem 0;
@@ -70,17 +76,74 @@ body {
   transition: transform 0.4s ease-in-out, width 0.4s ease-in-out, opacity 0.4s ease-in-out;
 }
 
-.check_icon:hover {
-  background: #99e2d0;
+.starter:hover .check_icon {
   cursor: pointer;
-  height: 40px;
   width: 80px;
   opacity: 1;
-  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.starter:hover .check_icon i {
+  transform: rotate(360deg);
+  transition: 0.8s;
+}
+
+main {
+  position: relative;
+  background-color: #f1eeee;
+  border-radius: 20px 20px 0 0;
+  padding: 1rem;
+}
+
+.meal_menu .menu__title::after {
+  background-color: #99E2D0;
+  bottom: 0;
+  content: "";
+  height: 4px;
+  left: 0;
+  position: absolute;
+  width: 30px;
+}
+
+.order_btn {
   display: flex;
-  align-items: center;
   justify-content: center;
-  transition: transform 0.4s ease-in-out, width 0.4s ease-in-out, opacity 0.4s ease-in-out;
+  text-decoration: none;
+}
+
+.order_btn p {
+  background-color: #b980db;
+  text-align: center;
+  justify-content: center;
+  font-size: 20px;
+  padding: 10px 30px;
+  border-radius: 2rem;
+  color: #fff;
+  font-weight: bold;
+}
+
+footer {
+  display: block;
+  background-color: #363636;
+  color: #fff;
+  padding: 5px;
+}
+
+footer ul {
+  padding: 10px 0px;
+}
+
+footer ul li {
+  padding: 2px;
+  list-style-type: none;
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+footer ul li i {
+  margin-right: 1rem;
 }
 
 .starter {
@@ -91,7 +154,6 @@ body {
   border-radius: 0.5rem;
   overflow: hidden;
   cursor: pointer;
-  gap: 1rem;
   animation: glissement 0.3s linear;
   margin-top: 1rem;
   animation-fill-mode: both;
@@ -115,7 +177,7 @@ body {
     opacity: 0;
   }
   to {
-    opacty: 1;
+    opacity: 1;
     transform: translateY(0);
   }
 }
