@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+
 body{
     margin: 0;
     padding: 0;
@@ -30,7 +34,7 @@ body{
   content: "\f060";
   position: absolute;
   top: 40%;
-  left: 0;
+  left: 5%;
   font-size: 20px;
   color: black;
 
@@ -50,9 +54,26 @@ body{
 
 }
 
-.title .fa {
-  font-size: 25px;
-  
+.title .fa .fas{
+  font-size: 40px;
+
+.like_btn{
+  transition-duration: .25s;
+    background-color: #f6f6f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    mix-blend-mode: lighten;
+
+}
+
+.like_btn::before{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
 
 }
 .content{
@@ -122,6 +143,13 @@ main{
   position: absolute;
   width: 30px;
 }
+
+.under_title{
+  height: 3px;
+  width: 30px;
+  background-color: #99e2d0;
+
+}
 .order_btn{
   display: flex;
   justify-content: center;
@@ -151,18 +179,27 @@ footer ul {
   padding: 10px 0px;
 }
 footer ul li{
+  position: relative;
   padding: 2px;
   list-style-type: none;
+  
 
 }
 
 footer ul li a{
   text-decoration: none;
   color: #fff;
+  
 }
 
 footer ul li i  {
-  margin-right: 1rem;
+ 
+  position: absolute;
+  
+}
+
+.footer_fas{
+  margin-left: 2rem;
 }
     
 .starter {
