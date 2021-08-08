@@ -51,31 +51,60 @@ body{
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-right: 2rem;
 
 }
 
-.title .fa .fas{
-  font-size: 40px;
+.like_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+}
 
-.like_btn{
-  transition-duration: .25s;
-    background-color: #f6f6f6;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    mix-blend-mode: lighten;
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+.addFavoriteIcon {
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+  .favoriteIcon {
+  cursor: pointer;
+  opacity: 0%;
+  background: linear-gradient(162deg, #ff79da 0%, #9356dc 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: opacity 0.3s ease-in-out;
+  position: relative;
+  left: 1.5rem;
+}
+.favoriteIcon:hover{
+  cursor: pointer;
+  opacity: 100%;
+  background: linear-gradient(162deg, #ff79da 0%, #9356dc 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  transition: opacity 0.3s ease-in-out;
+  position: relative;
 
 }
 
-.like_btn::before{
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-}
 
-}
+
 .content{
   flex: 1;
   flex-direction: column;
@@ -234,6 +263,5 @@ footer ul li i  {
     transform: translateY(0);
   }
 }
-
 
 
