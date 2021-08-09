@@ -211,7 +211,7 @@ main {
 }
 
 .order_btn p {
-  background-color: #b980db;
+  background: linear-gradient(162deg, #ff79da 0%, #9356dc 100%);
   text-align: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
