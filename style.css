@@ -77,7 +77,7 @@ body {
 }
 .function span {
   position: absolute;
-  left: 10px;
+  left: -10px;
   width: 20px;
   height: 20px;
   border-radius: 50%;
@@ -86,10 +86,9 @@ body {
   text-align: center;
   padding: 3px;
 }
-.function i {
-  margin-left: -1.7rem;
-  margin-right: 1rem;
-  position: relative;
+.function .icon_choice {
+  position: absolute;
+  left: 30px;
 }
 .function .fa-store {
   color: #9356DC;
@@ -98,7 +97,7 @@ body {
 .card_resto {
   background-color: white;
   border-radius: 15px;
-  box-shadow: 0px 26px 58px -22px rgba(0, 0, 0, 0.48);
+  box-shadow: 0px 0px 16px #f7f2f2;
   margin: 16px;
   overflow: hidden;
   position: relative;
@@ -115,8 +114,7 @@ body {
   padding-top: 2rem;
   padding-bottom: 3rem;
 }
-
-a {
+#restaurants a {
   text-decoration: none;
   color: black;
 }
@@ -136,11 +134,24 @@ a {
   margin-right: 15px;
 }
 
-@media screen and (min-width: 600px) and (max-width: 1024px) {
+@media screen and (min-width: 740px) {
+  .expoler_restaurant {
+    display: flex;
+    justify-content: center;
+    width: auto;
+  }
+
   .how_order {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: auto;
     position: relative;
+  }
+
+  .function p {
+    width: 210px;
+    margin-left: 60px;
   }
 
   .function span {

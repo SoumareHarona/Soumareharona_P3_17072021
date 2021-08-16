@@ -89,7 +89,7 @@ p {
 
   span{
     position: absolute;
-    left: 10px;
+    left: -10px;
     width: 20px;
     height: 20px;
     border-radius: 50%;
@@ -99,10 +99,9 @@ p {
     padding: 3px;
 
   }
-  i{
-    margin-left: -1.7rem;
-    margin-right: 1rem;
-    position: relative;
+  .icon_choice{
+    position: absolute;
+    left: 30px;
   }
 
   .fa-store{
@@ -113,7 +112,7 @@ p {
 .card_resto{
   background-color: white;
     border-radius: 15px;
-    box-shadow: 0px 26px 58px -22px rgb(0 0 0 / 48%);
+    box-shadow: 0px 0px 16px #f7f2f2;
     margin: 16px;
     overflow: hidden;
     position: relative;
@@ -130,13 +129,14 @@ p {
   margin-top: 3rem;
   padding-top: 2rem;
   padding-bottom: 3rem;
-}
-
- 
   a{
     text-decoration: none;
     color: black;
   }
+}
+
+ 
+  
 
 
 .resto_content{
@@ -157,12 +157,28 @@ p {
   }
 }
 
+//mobile//
 
-@media screen and(min-width:600px) and(max-width:1024px) {
+@media screen and(min-width:740px)  {
+
+  .expoler_restaurant {
+    display: flex;
+    justify-content: center;
+    width: auto;
+  }
+
   .how_order{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: auto;
     position: relative;
+    
+  }
+
+  .function p {
+    width:210px;
+    margin-left: 60px;
   }
 
   .function span{
@@ -175,18 +191,6 @@ p {
   }
   
 }
-
-
-  
-
-
-
-
-
-
-
-
-
 
 
 //Page restaurant enchantée//
@@ -380,8 +384,6 @@ main{
   border-radius: 2rem;
   color: #fff;
   font-weight: bold;
- 
-
   }
   
 
