@@ -8,6 +8,11 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+        <script src="https://kit.fontawesome.com/6f426f0a4d.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <header class="header_title">
@@ -15,28 +20,127 @@
         </header>
         <section class="locate_restaurant"></section>
             <div class="restaurants_position">
-                <div class="locate">recherche de ville</div>
+                <div class="locate"><i class="fas fa-map-marker-alt"></i>Paris, Belleville</div>
                 <div class="explorer">
-                    <h1>Réservez le menu qui vous convient</h1>
-                    <p>Découvrez des réstaurants d'exception, sélectionnés par nos soins</p>
+                    <h3>Réservez le menu qui vous convient</h3>
+                    <span>Découvrez des réstaurants d'exception, sélectionnés par nos soins</span>
                     <a href="#restaurants" class="expoler_restaurant"><p>Explorer nos restaurants</p></a>
                 </div>
+                
             </div>
         </section>
 
         <section class="functioning">
-            <h4>Fontionnement</h4>
-            <div class="function">
-                <span class="number">1</span>
-                <div class="icon_choice">
-                    
+            <h3 class="title_func">Fontionnement</h4>
+            <div class="how_order">
+                <div class="function one">
+                    <span class="number">1</span>
+                    <div class="icon_choice"><i class="fas fa-mobile-alt"></i></div>
+                    <p>Choisissez un restaurant</p>
                 </div>
-                <p></p>
+
+                <div class="function two">
+                    <span class="number">2</span>
+                    <div class="icon_choice"><i class="fas fa-list"></i></div>
+                    <p>Composez votre menu</p>
+                </div>
+
+                <div class="function three">
+                    <span class="number">3</span>
+                    <div class="icon_choice"><i class="fas fa-store"></i></div>
+                    <p>Dégustez au restaurant</p>
+                </div>
             </div>
-
-
-
         </section>
+
+        <section id="restaurants">
+            <h3 class="title_func">Restaurants</h3>
+            <div class="restos">
+                <a href="/pages/menu_lapalette.html">
+                    <div class="card_resto">
+                        <div class="img_resto">
+                            <img src="/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg">
+                        </div>
+                        <div class="resto_content">
+                            <div class="resto_desc">
+                                <strong>La palette du goût</strong>
+                                <p>Ménilmontant</p>
+                            </div>
+                            <div class="like_btn">
+                                <span class="favoriteIcon material-icons">favorite</span>
+                                <span class="addFavoriteIcon material-icons">favorite_border</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="/pages/menu_enchantee.html">
+                    <div class="card_resto">
+                        <div class="img_resto">
+                            <img src="/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg">
+                        </div>
+                        <div class="resto_content">
+                            <div class="resto_desc">
+                                <strong>La note enchantée</strong>
+                                <p>Charonne</p>
+                            </div>
+                            <div class="like_btn">
+                                <span class="favoriteIcon material-icons">favorite</span>
+                                <span class="addFavoriteIcon material-icons">favorite_border</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="/pages/menu_lafrançaise.html">
+                    <div class="card_resto">
+                        <div class="img_resto">
+                            <img src="/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg">
+                        </div>
+                        <div class="resto_content">
+                            <div class="resto_desc">
+                                <strong>À la française</strong>
+                                <p>Cité rouge</p>
+                            </div>
+                            <div class="like_btn">
+                                <span class="favoriteIcon material-icons">favorite</span>
+                                <span class="addFavoriteIcon material-icons">favorite_border</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="/pages/ledelice.html">
+                    <div class="card_resto">
+                        <div class="img_resto">
+                            <img src="/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg">
+                        </div>
+                        <div class="resto_content">
+                            <div class="resto_desc">
+                                <strong>Le délice des sens</strong>
+                                <p>Folie-Méricourt</p>
+                            </div>
+                            <div class="like_btn">
+                                <span class="favoriteIcon material-icons">favorite</span>
+                                <span class="addFavoriteIcon material-icons">favorite_border</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <footer>
+            <h3>ohmyfood</h3>
+          
+            <ul>
+              <li><i class="fas fa-utensils"></i><a class="footer_fas" href="pages/myrestaurant">Proposer un restaurant</a></li>
+              <li><i class="fas fa-hands-helping"></i><a class="footer_fas" href="pages/membership">Devenir partenaire</a></li>
+              <li><a href="pages/legal">Mentions légales</a></li>
+              <li><a href="mailto:contact@ohmyfood.com?subject=Demande%20de%20contact&body=J'aimerais vous contacter%20">Contact</a></li>
+            </ul>
+          
+          </footer>
             
             
        
