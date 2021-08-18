@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 body {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   max-width: 1400px;
   min-width: 300px;
@@ -46,7 +46,7 @@ body {
   text-decoration: none;
 }
 .expoler_restaurant p {
-  background: linear-gradient(162deg, #ff79da 0%, #9356dc 100%);
+  background: linear-gradient(162deg, #FF79DA 0%, #9356DC 100%);
   text-align: center;
   justify-content: center;
   width: auto;
@@ -59,6 +59,7 @@ body {
 }
 
 .title_func {
+  margin-top: 3rem;
   margin-left: 10px;
 }
 
@@ -74,6 +75,7 @@ body {
   border-radius: 1rem;
   box-shadow: #cfcaca 0 0 10px;
   margin-bottom: 1rem;
+  position: relative;
 }
 .function span {
   position: absolute;
@@ -106,6 +108,16 @@ body {
   height: 160px;
   width: 100%;
   object-fit: cover;
+}
+.card_resto .new_resto {
+  background-color: #99E2D0;
+  position: absolute;
+  left: 20rem;
+  bottom: 11rem;
+  padding: 0.5rem;
+  border-radius: 0.1rem;
+  color: #035540;
+  font-weight: bold;
 }
 
 #restaurants {
@@ -144,14 +156,15 @@ body {
   .how_order {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    width: auto;
+    justify-content: space-between;
+    width: 100%;
     position: relative;
   }
 
   .function p {
-    width: 210px;
+    width: 100%;
     margin-left: 60px;
+    margin-right: 1rem;
   }
 
   .function span {
@@ -235,7 +248,7 @@ body {
 .favoriteIcon {
   cursor: pointer;
   opacity: 0%;
-  background: linear-gradient(162deg, #ff79da 0%, #9356dc 100%);
+  background: linear-gradient(162deg, #FF79DA 0%, #9356DC 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -247,7 +260,7 @@ body {
 .favoriteIcon:hover {
   cursor: pointer;
   opacity: 100%;
-  background: linear-gradient(162deg, #ff79da 0%, #9356dc 100%);
+  background: linear-gradient(162deg, #FF79DA 0%, #9356DC 100%);
   background-clip: text;
   -webkit-background-clip: text;
   transition: opacity 0.3s ease-in-out;
@@ -262,6 +275,7 @@ body {
   text-overflow: ellipsis;
   padding: 0.5rem;
   line-height: 22px;
+  width: 250px;
 }
 .price {
   display: flex;
@@ -270,7 +284,7 @@ body {
 }
 
 .check_icon {
-  background-color: #99e2d0;
+  background-color: #99E2D0;
   color: #fff;
   cursor: pointer;
   height: 60px;
@@ -285,7 +299,7 @@ body {
 
 .menu-content:hover .check_icon {
   cursor: pointer;
-  width: 80px;
+  width: 70px;
   opacity: 1;
 }
 .menu-content:hover .check_icon i {
@@ -293,77 +307,9 @@ body {
   transition: 0.8s;
 }
 
-main {
-  background-color: #f1eeee;
-  border-radius: 20px 20px 0 0;
-  padding: 1rem;
-}
-
-.meal_menu .menu__title::after {
-  background-color: #99E2D0;
-  bottom: 0;
-  content: "";
-  height: 4px;
-  left: 0;
-  position: absolute;
-  width: 30px;
-}
-
-.under_title {
-  height: 3px;
-  width: 30px;
-  background-color: #99e2d0;
-}
-
-.order_btn {
-  display: flex;
-  justify-content: center;
-  text-decoration: none;
-}
-
-.order_btn p {
-  background: linear-gradient(162deg, #ff79da 0%, #9356dc 100%);
-  text-align: center;
-  justify-content: center;
-  font-size: 20px;
-  padding: 10px 30px;
-  border-radius: 2rem;
-  color: #fff;
-  font-weight: bold;
-}
-
-footer {
-  display: block;
-  background-color: #363636;
-  color: #fff;
-  padding: 5px;
-}
-
-footer ul {
-  padding: 10px 0px;
-}
-
-footer ul li {
-  position: relative;
-  padding: 2px;
-  list-style-type: none;
-}
-footer ul li i {
-  position: absolute;
-}
-
-footer ul li a {
-  text-decoration: none;
-  color: #fff;
-}
-
-.footer_fas {
-  margin-left: 2rem;
-}
-
 .menu-content {
   display: flex;
-  flex-direction: row;
+  max-width: 100%;
   background-color: #fff;
   box-shadow: 0 0 16px #d4cfcf;
   border-radius: 0.5rem;
@@ -424,6 +370,76 @@ footer ul li a {
   animation-delay: 1s;
 }
 
+main {
+  background-color: #f1eeee;
+  border-radius: 20px 20px 0 0;
+  padding: 1rem;
+  position: relative;
+}
+
+.meal_menu .menu__title::after {
+  background-color: #99E2D0;
+  bottom: 0;
+  content: "";
+  height: 4px;
+  left: 0;
+  position: absolute;
+  width: 30px;
+}
+
+.under_title {
+  height: 3px;
+  width: 30px;
+  margin-top: -15px;
+  background-color: #99E2D0;
+}
+
+.order_btn {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.order_btn p {
+  background: linear-gradient(162deg, #FF79DA 0%, #9356DC 100%);
+  text-align: center;
+  justify-content: center;
+  font-size: 20px;
+  padding: 10px 30px;
+  border-radius: 2rem;
+  color: #fff;
+  font-weight: bold;
+}
+
+footer {
+  display: block;
+  background-color: #363636;
+  color: #fff;
+  padding: 5px;
+}
+
+footer ul {
+  padding: 10px 0px;
+}
+
+footer ul li {
+  position: relative;
+  padding: 2px;
+  list-style-type: none;
+}
+footer ul li i {
+  position: absolute;
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.footer_fas {
+  margin-left: 2rem;
+}
+
 @media only screen and (min-width: 657px) {
   footer ul {
     display: flex;
@@ -432,20 +448,22 @@ footer ul li a {
     margin-right: 2rem;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 767px) {
   .the_menus {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 1.5rem;
-    justify-content: center;
-  }
-
-  main {
-    margin: 0 3rem 3rem;
-  }
-
-  .the_menus {
+    max-width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    text-overflow: ellipsis;
     position: relative;
+    gap: 20px;
+  }
+
+  .content {
+    max-width: 100%;
+  }
+  main {
+    margin: 0 2rem 0 2rem;
+    max-width: 100%;
   }
 }
 
