@@ -7,48 +7,38 @@ body {
   min-width: 300px;
 }
 
-.load_content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  width: 100%;
-  background-color: #f7f2f2;
+#loader {
   position: absolute;
+  left: 50%;
+  top: 50%;
   z-index: 1;
-  animation: load 4s linear infinite;
-}
-
-.loader {
-  margin: auto;
-  margin-top: 100px;
-  margin-bottom: 100px;
-  border: 16px solid #99E2D0;
+  border: 16px solid #9356DC;
   width: 120px;
   height: 120px;
+  margin: -76px 0 0 -76px;
   border-top-color: #99E2D0;
   border-bottom-color: #FF79DA;
   border-radius: 50%;
-  animation: chargeur 4s linear;
+  animation: chargeur 4s linear infinite;
 }
 
 @keyframes chargeur {
   0% {
     transform: rotate(0deg) scale(1);
-    border-top-color: #9356DC;
-    border-bottom-color: #9356DC;
+    border-top-color: #FF79DA;
+    border-bottom-color: #99E2D0;
   }
   25% {
     border-top-color: #FF79DA;
-    border-bottom-color: #FF79DA;
+    border-bottom-color: #99E2D0;
   }
   50% {
     transform: rotate(360deg) scale(1.2);
-    border-top-color: #99E2D0;
+    border-top-color: #FF79DA;
     border-bottom-color: #99E2D0;
   }
   75% {
-    border-top-color: #9356DC;
+    border-top-color: #99E2D0;
     border-bottom-color: #FF79DA;
   }
   100% {
@@ -57,14 +47,38 @@ body {
     border-bottom-color: #99E2D0;
   }
 }
-@keyframes load {
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s;
+}
+
+@-webkit-keyframes animatebottom {
   from {
-    visibility: visible;
+    bottom: -100px;
+    opacity: 0;
   }
   to {
-    visibility: hidden;
+    bottom: 0px;
+    opacity: 1;
   }
 }
+@keyframes animatebottom {
+  from {
+    bottom: -100px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+#site {
+  display: none;
+}
+
 .locate {
   display: flex;
   justify-content: center;

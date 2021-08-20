@@ -13,47 +13,40 @@ body{
 }
 
 //page d'accueil//
-.load_content{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  width: 100%;
-  background-color: #f7f2f2;
+
+#loader{
   position: absolute;
+  left: 50%;
+  top: 50%;
   z-index: 1;
-  animation: load 4s linear infinite;
-}
-.loader{
-  margin:auto;
-  margin-top: 100px;
-  margin-bottom: 100px;
-  border: 16px solid $tertiaire;
+  border: 16px solid $primaire;
   width: 120px;
   height: 120px;
+  margin: -76px 0 0 -76px;
   border-top-color: $tertiaire;
   border-bottom-color: $secondaire;
   border-radius: 50%;
-  animation: chargeur 4s linear ;
+  animation: chargeur 4s linear infinite;
+  
 }
 
 @keyframes chargeur {
   0%{
     transform: rotate(0deg) scale(1);
-    border-top-color:$primaire;
-    border-bottom-color:$primaire;
+    border-top-color:$secondaire;
+    border-bottom-color:$tertiaire;
   }
   25%{
     border-top-color:$secondaire;
-    border-bottom-color: $secondaire;
+    border-bottom-color: $tertiaire;
   }
   50% {
      transform: rotate(360deg) scale(1.20);
-    border-top-color: $tertiaire;
+    border-top-color: $secondaire;
     border-bottom-color: $tertiaire;
   }
   75%{
-    border-top-color: $primaire;
+    border-top-color: $tertiaire;
     border-bottom-color:$secondaire;
   }
   100%{
@@ -62,22 +55,31 @@ body{
     border-bottom-color:$tertiaire;
   }
   
+ 
 }
 
-@keyframes load{
-  from{
-    
-    visibility:visible;
-  }
-
-  to{
-    
-    visibility: hidden;
-  }
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
 }
 
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
 
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
 
+#site {
+  display: none;
+  
+}
 
 
 

@@ -13,11 +13,11 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
         <script src="https://kit.fontawesome.com/6f426f0a4d.js" crossorigin="anonymous"></script>
     </head>
-    <body>
-        
-        <div class="load_content"><div class="loader"></div></div>
-        
-       
+    <body onload="myFunction()">
+
+        <div id="loader"></div>
+        <div id="site" class="animate-bottom">
+    
         <header class="header_title">
             <img class="logo" src="./images/logo/ohmyfood@2x.svg" alt="logo">
         </header>
@@ -145,8 +145,20 @@
             </ul>
           
           </footer>
+          </div>
             
             
-          
+          <script>
+            var myVar;
+            
+            function myFunction() {
+              myVar = setTimeout(showPage, 3000);
+            }
+            
+            function showPage() {
+              document.getElementById("loader").style.display = "none";
+              document.getElementById("site").style.display = "block";
+            }
+            </script>     
     </body>
 </html>
