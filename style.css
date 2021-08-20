@@ -286,6 +286,9 @@ body {
   justify-content: space-between;
   padding-right: 2rem;
 }
+.title h1 {
+  font-size: 26px;
+}
 
 .like_btn {
   display: flex;
