@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 
 $primaire: #9356DC ;
 $secondaire: #FF79DA;
@@ -9,6 +10,7 @@ body{
     padding: 0;
     max-width: 1400px;
     min-width: 300px;
+    font-family: 'roboto', sans-serif;
  
 }
 
@@ -91,7 +93,10 @@ body{
   background-color: #e9e5e5;
   height: 43px;
   border-top:solid #d8d4d4 2px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
   line-height: 41px;
+  color: rgb(46, 46, 46);
   i{
     margin-right: 1rem;
   }
@@ -105,17 +110,21 @@ body{
   padding-bottom: 3rem;
   
 
+  
+
   h3{
     
     text-align: center;
-    margin-top: 0px;
-    padding: 1rem;
+    margin: 0px;
+    padding: 2rem 1rem 0 1rem;
     font-size: 25px;
+    
   }
   span{
     text-align: center;
     padding: 1rem;
     margin: 0;
+    
   }
 
 }
@@ -132,8 +141,9 @@ p {
   padding: 10px 15px;
   border-radius: 2rem;
   color: #fff;
-  font-weight: bold;
   margin: 0 2rem;
+  font-family: 'roboto', sans-serif;
+  margin-top: 1rem;
   
 }
 }
@@ -141,7 +151,8 @@ p {
 
 .title_func{
   margin-top: 3rem;
-    margin-left: 10px;   
+  margin-left: 15px;   
+  font-family: 'roboto', sans-serif;
 }
 
 .function {
@@ -157,6 +168,7 @@ p {
   box-shadow: rgb(207, 202, 202) 0 0 10px;
   margin-bottom: 1rem;
   position: relative;
+ 
   
 
   span{
@@ -169,15 +181,23 @@ p {
     background-color: $primaire;
     text-align: center;
     padding: 3px;
+    
 
   }
   .icon_choice{
     position: absolute;
     left: 30px;
+    color: gray;
   }
 
   .fa-store{
     color: $primaire;
+  }
+
+  p{
+    font-family: 'roboto', sans-serif;
+    font-weight: bolder;
+    margin-left: 2rem;
   }
 }
 
@@ -330,6 +350,8 @@ p {
 
   h1{
     font-size: 26px;
+    font-family: 'Shrikhand', cursive;
+
     
   }
 
@@ -548,11 +570,11 @@ main{
   background:linear-gradient(162deg , $secondaire 0%, $primaire 100%);
   text-align: center;
   justify-content: center;
-  font-size: 20px;
+  font-size: 18px;
   padding: 10px 30px;
   border-radius: 2rem;
   color: #fff;
-  font-weight: bold;
+  
   }
   
 
@@ -562,14 +584,23 @@ footer{
   background-color: #363636;
   color: #fff;
   padding: 5px;
+
+  h3{
+    font-size: 16px;
+    font-family: 'Shrikhand';
+    font-weight: normal;
+    padding-left: 15px;
+    
+    
+  }
 }
 
 footer ul {
-  padding: 10px 0px;
+  padding: 10px 15px;
+  
 }
 footer ul li{
   position: relative;
-  padding: 2px;
   list-style-type: none;
 
     i  {
@@ -582,6 +613,8 @@ footer ul li{
 footer ul li a{
   text-decoration: none;
   color: #fff;
+  font-family: 'roboto', sans-serif;
+  font-size: 15px;;
 
   
   
