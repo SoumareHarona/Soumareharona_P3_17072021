@@ -9,78 +9,60 @@ body {
   font-family: "roboto", sans-serif;
 }
 
-#loader {
+.load {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  justify-content: center;
   position: absolute;
-  left: 50%;
-  top: 50%;
+  left: 0px;
+  width: 100%;
+  animation: load-end 4s linear infinite;
+  background-color: #fff;
   z-index: 1;
-  border: 16px solid #9356DC;
-  width: 120px;
-  height: 120px;
-  margin: -76px 0 0 -76px;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+}
+
+.loading--full-height {
+  align-items: center;
+  height: 100%;
+}
+
+.loading::after {
+  content: "";
+  width: 100px;
+  height: 100px;
+  border: 10px solid #9356DC;
   border-top-color: #99E2D0;
   border-bottom-color: #FF79DA;
   border-radius: 50%;
-  animation: chargeur 4s linear infinite;
+  transform: rotate(0.16turn);
+  animation: loading 1s ease infinite;
 }
 
-@keyframes chargeur {
-  0% {
-    transform: rotate(0deg) scale(1);
-    border-top-color: #FF79DA;
-    border-bottom-color: #99E2D0;
-  }
-  25% {
-    border-top-color: #FF79DA;
-    border-bottom-color: #99E2D0;
-  }
-  50% {
-    transform: rotate(360deg) scale(1.2);
-    border-top-color: #FF79DA;
-    border-bottom-color: #99E2D0;
-  }
-  75% {
-    border-top-color: #99E2D0;
-    border-bottom-color: #FF79DA;
-  }
-  100% {
-    transform: rotate(720deg) scale(1);
-    border-top-color: #FF79DA;
-    border-bottom-color: #99E2D0;
-  }
-}
-.animate-bottom {
-  position: relative;
-  -webkit-animation-name: animatebottom;
-  -webkit-animation-duration: 1s;
-  animation-name: animatebottom;
-  animation-duration: 1s;
-}
-
-@-webkit-keyframes animatebottom {
+@keyframes loading {
+  /* Safari support */
   from {
-    bottom: -100px;
-    opacity: 0;
+    transform: rotate(0turn);
   }
   to {
-    bottom: 0px;
-    opacity: 1;
+    transform: rotate(1turn);
   }
 }
-@keyframes animatebottom {
+@keyframes load-end {
   from {
-    bottom: -100px;
-    opacity: 0;
+    opacity: 100%;
   }
   to {
-    bottom: 0;
-    opacity: 1;
+    opacity: 0%;
+    visibility: hidden;
   }
 }
-#site {
-  display: none;
-}
-
 .locate {
   display: flex;
   justify-content: center;
@@ -133,6 +115,10 @@ body {
   font-family: "roboto", sans-serif;
   margin-top: 1rem;
 }
+.expoler_restaurant p:hover {
+  background: linear-gradient(#f5b1e2, #c098f1);
+  box-shadow: 0 2px 10px #868686;
+}
 
 .title_func {
   margin-top: 3rem;
@@ -153,6 +139,9 @@ body {
   box-shadow: #cfcaca 0 0 10px;
   margin-bottom: 1rem;
   position: relative;
+}
+.function:hover {
+  background-color: #fff;
 }
 .function span {
   position: absolute;
@@ -186,6 +175,7 @@ body {
   margin: 16px;
   overflow: hidden;
   position: relative;
+  cursor: pointer;
 }
 .card_resto img {
   height: 160px;
@@ -201,6 +191,10 @@ body {
   border-radius: 0.1rem;
   color: #035540;
   font-weight: bold;
+}
+
+.card_resto:hover {
+  transform: scale(1.03);
 }
 
 #restaurants {
@@ -336,10 +330,9 @@ body {
   cursor: pointer;
   opacity: 0%;
   background: linear-gradient(162deg, #FF79DA 0%, #9356DC 100%);
-  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.7s ease-in-out;
   position: relative;
   left: 1.5rem;
 }
@@ -348,9 +341,8 @@ body {
   cursor: pointer;
   opacity: 100%;
   background: linear-gradient(162deg, #FF79DA 0%, #9356DC 100%);
-  background-clip: text;
   -webkit-background-clip: text;
-  transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.7s ease-in-out;
   position: relative;
 }
 
@@ -495,6 +487,11 @@ main {
   padding: 10px 30px;
   border-radius: 2rem;
   color: #fff;
+}
+
+.order_btn p:hover {
+  background: linear-gradient(#f5b1e2, #c098f1);
+  box-shadow: 0px 0px 10px #868686;
 }
 
 footer {
