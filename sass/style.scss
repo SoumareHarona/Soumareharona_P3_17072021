@@ -24,14 +24,13 @@ body{
   left: 0px;
   bottom: 0px;
   width: 100%;
-  animation: load-end 3s linear;
+  animation: load-end 2s linear;
   animation-delay: 1.05s;
   animation-fill-mode: both;
   background-color: #fff;
-  z-index: 1;
-  
-
+  z-index: 1000;
 }
+
 .loading {
   display: flex;
   justify-content: center;
@@ -57,25 +56,27 @@ body{
 }
 
 @keyframes loading {
-  /* Safari support */
   from {
     transform: rotate(0turn);
   }
   
   to {
     transform: rotate(1turn);
-    
+    z-index : -60 !important ;
   }
+  
 }
 
 @keyframes load-end {
   from {
-    opacity: 1;
+    opacity: 100%;
   }
   to {
     opacity: 0;
+   visibility: hidden;
   }
 }
+
 
 
 
