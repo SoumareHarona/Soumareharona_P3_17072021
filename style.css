@@ -142,9 +142,8 @@ body {
   margin-bottom: 1rem;
   position: relative;
 }
-.function:hover {
-  background-color: #fff;
-  box-shadow: 0 2px 10px #868686;
+.function:hover .fas {
+  color: #9356DC;
 }
 .function span {
   position: absolute;
@@ -161,9 +160,6 @@ body {
   position: absolute;
   left: 30px;
   color: gray;
-}
-.function .fa-store {
-  color: #9356DC;
 }
 .function p {
   font-family: "roboto", sans-serif;
