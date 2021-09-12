@@ -168,9 +168,12 @@ p {
   box-shadow: rgb(207, 202, 202) 0 0 10px;
   margin-bottom: 1rem;
   position: relative;
+  cursor: pointer;
+  &:hover{
+    background-color: #ece0fc;
+  }
   &:hover .fas{
-    color:$primaire;
-    
+    color:$primaire; 
   }
  
   span{
@@ -196,6 +199,7 @@ p {
     font-family: 'roboto', sans-serif;
     font-weight: bolder;
     margin-left: 2rem;
+    
   }
 }
 
